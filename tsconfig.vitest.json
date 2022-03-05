@@ -1,0 +1,15 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "include": ["src/**/__tests__/*", "test/unit/**/*.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@s/*": ["./src/modules/shared/*"],
+      "@r/*": ["./src/modules/requests/*"],
+      "@a/*": ["./src/modules/auth/*"]
+    },
+    "types": ["node", "jsdom"]
+  }
+}

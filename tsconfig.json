@@ -1,0 +1,24 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*", "test/unit/**/*.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["esnext"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@s/*": ["./src/modules/shared/*"],
+      "@r/*": ["./src/modules/requests/*"],
+      "@a/*": ["./src/modules/auth/*"]
+    }
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ]
+}
